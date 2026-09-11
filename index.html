@@ -1,0 +1,581 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산</title>
+  <meta name="description" content="퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.">
+  <meta name="keywords" content="실업급여 계산기, 실업급여 수급자격, 구직급여 모의계산, 실업급여 상한액, 실업급여 하한액, 고용보험 수급기간">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://unemployed.enjoy-onepage.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://unemployed.enjoy-onepage.com/">
+  <meta property="og:site_name" content="실업급여 계산기">
+  <meta property="og:title" content="실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산">
+  <meta property="og:description" content="퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.">
+  <meta property="og:image" content="https://unemployed.enjoy-onepage.com/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산">
+  <meta name="twitter:description" content="퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.">
+  <meta name="twitter:image" content="https://unemployed.enjoy-onepage.com/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421332766487920" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://unemployed.enjoy-onepage.com/#webapp",
+        "name": "실업급여 계산기",
+        "url": "https://unemployed.enjoy-onepage.com/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "고용보험법 기준 1일 구직급여액(상한액 66,000원, 하한액 64,192원)과 연령·가입기간별 소정급여일수(120~270일)를 실시간 모의계산합니다.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://unemployed.enjoy-onepage.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "실업급여 수급 자격 조건은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "이직일 이전 18개월간 피보험 단위기간이 통산 180일 이상이어야 하며, 비자발적 이직(권고사직, 계약만료, 정년 등) 사유여야 합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "실업급여 1일 상한액과 하한액은 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "1일 구직급여 상한액은 66,000원이며, 하한액은 최저임금의 80% 기준으로 64,192원(1일 8시간 근로 기준)입니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-teal-600 transition">
+        <span class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center font-black text-sm shadow-sm">고용</span>
+        <span>실업급여 계산기</span>
+      </a>
+      <nav class="flex items-center gap-4 text-sm font-medium text-slate-600">
+        <a href="/about.html" class="hover:text-teal-600 transition">산정 기준</a>
+        <a href="/guides/eligibility-criteria.html" class="hidden sm:inline hover:text-teal-600 transition">수급 자격</a>
+        <a href="/privacy.html" class="hover:text-teal-600 transition">개인정보처리방침</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-4xl mx-auto px-4 pt-6 pb-4 w-full">
+    <div class="text-center md:text-left md:flex md:items-center md:justify-between border-b border-slate-200 pb-5">
+      <div>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 text-teal-800 mb-2">
+          <span>2026 고용보험법 최신 상·하한액 반영</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          내 실업급여 수급일수와 예상 수령액은?
+        </h1>
+        <p class="text-slate-600 text-sm mt-1">
+          퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 일일 수급액과 총 수령액을 즉시 계산합니다.
+        </p>
+      </div>
+      <div class="mt-4 md:mt-0 flex gap-2 justify-center">
+        <button id="shareBtn" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-teal-700 bg-teal-50 hover:bg-teal-100 rounded-lg border border-teal-200 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          공유하기
+        </button>
+        <button id="copyUrlBtn" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg border border-slate-200 transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          링크 복사
+        </button>
+      </div>
+    </div>
+  </section>
+  <main class="max-w-4xl mx-auto px-4 py-4 w-full flex-grow">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      
+      <!-- Input Panel (5 cols) -->
+      <section class="lg:col-span-5 bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+        <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <span class="w-2 h-4 bg-teal-600 rounded-full"></span>
+          이직 당시 조건 입력
+        </h2>
+
+        <!-- 연령 구분 -->
+        <div class="mb-4">
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">퇴사 당시 연령 구분</label>
+          <div class="grid grid-cols-2 gap-2">
+            <label class="cursor-pointer">
+              <input type="radio" name="ageGroup" value="under50" checked class="peer sr-only">
+              <div class="p-2.5 rounded-xl border border-slate-200 peer-checked:border-teal-600 peer-checked:bg-teal-50 text-center transition">
+                <div class="text-xs font-bold text-slate-800 peer-checked:text-teal-700">만 50세 미만</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">일반 근로자</div>
+              </div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="ageGroup" value="over50" class="peer sr-only">
+              <div class="p-2.5 rounded-xl border border-slate-200 peer-checked:border-teal-600 peer-checked:bg-teal-50 text-center transition">
+                <div class="text-xs font-bold text-slate-800 peer-checked:text-teal-700">만 50세 이상 / 장애인</div>
+                <div class="text-[11px] text-slate-500 mt-0.5">수급기간 +30일 우대</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 고용보험 가입기간 -->
+        <div class="mb-4">
+          <label for="insPeriod" class="block text-xs font-bold text-slate-700 mb-1.5">고용보험 총 가입기간 (피보험단위기간)</label>
+          <select id="insPeriod" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 font-semibold text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <option value="under1">1년 미만 (최소 180일 이상)</option>
+            <option value="1to3" selected>1년 이상 ~ 3년 미만</option>
+            <option value="3to5">3년 이상 ~ 5년 미만</option>
+            <option value="5to10">5년 이상 ~ 10년 미만</option>
+            <option value="over10">10년 이상</option>
+          </select>
+        </div>
+
+        <!-- 퇴사 전 3개월 월평균 급여 -->
+        <div class="mb-4">
+          <div class="flex justify-between items-center mb-1.5">
+            <label for="monthlyWage" class="text-xs font-bold text-slate-700">퇴사 전 3개월 월평균 급여 (세전)</label>
+            <span id="wageFormatted" class="text-xs font-semibold text-teal-600">3,000,000원</span>
+          </div>
+          <div class="relative">
+            <input type="number" id="monthlyWage" step="10000" min="500000" max="30000000" value="3000000" class="w-full text-right pr-8 pl-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-500 text-base">
+            <span class="absolute right-3 top-3 text-xs font-bold text-slate-500 pointer-events-none">원</span>
+          </div>
+
+          <!-- Quick Buttons -->
+          <div class="grid grid-cols-4 gap-1.5 mt-2">
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="2000000">200만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="2500000">250만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="3000000">300만</button>
+            <button type="button" class="quick-btn text-[11px] py-1 bg-slate-100 hover:bg-slate-200 rounded-md font-medium text-slate-700 transition" data-amount="4000000">400만</button>
+          </div>
+          <div class="grid grid-cols-3 gap-1.5 mt-1.5">
+            <button type="button" class="quick-add text-[11px] py-1 bg-teal-50 hover:bg-teal-100 rounded-md font-medium text-teal-700 transition" data-add="100000">+10만</button>
+            <button type="button" class="quick-add text-[11px] py-1 bg-teal-50 hover:bg-teal-100 rounded-md font-medium text-teal-700 transition" data-add="500000">+50만</button>
+            <button type="button" class="quick-add text-[11px] py-1 bg-teal-50 hover:bg-teal-100 rounded-md font-medium text-teal-700 transition" data-add="1000000">+100만</button>
+          </div>
+        </div>
+
+        <!-- 1일 소정근로시간 -->
+        <div class="mb-4">
+          <label for="workHours" class="block text-xs font-bold text-slate-700 mb-1.5">1일 소정근로시간</label>
+          <select id="workHours" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <option value="8" selected>8시간 (일반 통상근로)</option>
+            <option value="7">7시간</option>
+            <option value="6">6시간</option>
+            <option value="5">5시간</option>
+            <option value="4">4시간 이하 (단시간 근로)</option>
+          </select>
+        </div>
+
+        <div id="capNotice" class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-[11px] text-teal-800 leading-relaxed">
+          <strong>💡 상·하한액 자동 적용:</strong> 1일 상한액 66,000원, 하한액 64,192원(8시간 기준) 사이에서 자동 보정됩니다.
+        </div>
+      </section>
+
+      <!-- Results Panel (7 cols) -->
+      <section class="lg:col-span-7 space-y-4">
+        
+        <!-- Summary Cards -->
+        <div class="bg-gradient-to-br from-teal-600 to-cyan-700 rounded-2xl p-5 text-white shadow-lg relative overflow-hidden">
+          <div class="relative z-10">
+            <div class="flex items-center justify-between">
+              <span id="durationBadge" class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-sm">총 150일 수급</span>
+              <span id="ageBadge" class="text-xs text-teal-100 font-medium">만 50세 미만 (1~3년)</span>
+            </div>
+
+            <div class="mt-4">
+              <div class="text-xs text-teal-200 font-medium">총 예상 수급액 합계</div>
+              <div class="flex items-baseline gap-2 mt-1">
+                <span id="resTotalBenefit" class="text-3xl sm:text-4xl font-black tracking-tight">9,774,000</span>
+                <span class="text-lg font-bold text-teal-100">원</span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-white/20 grid grid-cols-2 gap-3">
+              <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                <div class="text-[11px] text-teal-200 font-medium">1일 구직급여액</div>
+                <div class="text-base font-bold text-amber-300 mt-0.5" id="resDailyBenefit">65,160원</div>
+              </div>
+              <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
+                <div class="text-[11px] text-teal-200 font-medium">월 수령 예상액 (30일 기준)</div>
+                <div class="text-base font-bold text-white mt-0.5" id="resMonthlyBenefit">1,954,800원</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 수급기간 로드맵 및 매트릭스 표 -->
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">연령 및 가입기간별 소정급여일수 기준표</h3>
+            <span class="text-[10px] text-slate-400">고용보험법 제50조</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left">
+              <thead class="bg-slate-50 text-slate-600 border-y border-slate-200">
+                <tr>
+                  <th class="py-2 px-2.5">피보험기간</th>
+                  <th class="py-2 px-2.5 text-center">50세 미만</th>
+                  <th class="py-2 px-2.5 text-center">50세 이상·장애인</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-700">
+                <tr id="rowUnder1" class="hover:bg-slate-50 transition">
+                  <td class="py-2 px-2.5">1년 미만</td>
+                  <td class="py-2 px-2.5 text-center font-medium">120일</td>
+                  <td class="py-2 px-2.5 text-center font-medium">120일</td>
+                </tr>
+                <tr id="row1to3" class="hover:bg-slate-50 transition bg-teal-50/60 font-bold text-teal-900">
+                  <td class="py-2 px-2.5">1년 이상 ~ 3년 미만</td>
+                  <td class="py-2 px-2.5 text-center">150일</td>
+                  <td class="py-2 px-2.5 text-center">180일</td>
+                </tr>
+                <tr id="row3to5" class="hover:bg-slate-50 transition">
+                  <td class="py-2 px-2.5">3년 이상 ~ 5년 미만</td>
+                  <td class="py-2 px-2.5 text-center font-medium">180일</td>
+                  <td class="py-2 px-2.5 text-center font-medium">210일</td>
+                </tr>
+                <tr id="row5to10" class="hover:bg-slate-50 transition">
+                  <td class="py-2 px-2.5">5년 이상 ~ 10년 미만</td>
+                  <td class="py-2 px-2.5 text-center font-medium">210일</td>
+                  <td class="py-2 px-2.5 text-center font-medium">240일</td>
+                </tr>
+                <tr id="rowOver10" class="hover:bg-slate-50 transition">
+                  <td class="py-2 px-2.5">10년 이상</td>
+                  <td class="py-2 px-2.5 text-center font-medium">240일</td>
+                  <td class="py-2 px-2.5 text-center font-medium">270일</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Google AdSense Unit 1 (In-Result Slot) -->
+        <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-4 overflow-hidden">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-6421332766487920"
+               data-ad-slot="3824727725"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- Deep-Dive Guides Section (전문 서브페이지 링크) -->
+    <section class="mt-8 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
+        <span class="w-2 h-4 bg-teal-600 rounded-full"></span>
+        실업급여 수급 핵심 가이드
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/guides/unemployment-benefits-guide.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-teal-50 hover:border-teal-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-teal-100 text-teal-700 mb-2">신청 매뉴얼</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-teal-600 transition">실업급여 신청 절차와 구직활동 인정</h4>
+          <p class="text-xs text-slate-500 mt-1">퇴사 후 고용센터 방문, 워크넷 구직신청 및 실업인정일 요령</p>
+        </a>
+        <a href="/guides/eligibility-criteria.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-teal-50 hover:border-teal-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-700 mb-2">수급 자격</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-teal-600 transition">자발적 퇴사도 실업급여 받는 예외 사유</h4>
+          <p class="text-xs text-slate-500 mt-1">임금체불, 통근곤란(왕복 3시간), 질병퇴사 인정 기준 완벽 정리</p>
+        </a>
+        <a href="/guides/self-employed-insurance.html" class="block p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-teal-50 hover:border-teal-200 transition group">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-700 mb-2">자영업자 특례</span>
+          <h4 class="font-bold text-sm text-slate-900 group-hover:text-teal-600 transition">자영업자 고용보험 가입 및 실업급여</h4>
+          <p class="text-xs text-slate-500 mt-1">폐업 시 120~210일간 지원받는 자영업자 실업급여 제도</p>
+        </a>
+      </div>
+    </section>
+    <!-- FAQ Accordion -->
+    <section class="mt-6 bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+      <h3 class="text-base font-bold text-slate-900 mb-4">자주 묻는 질문 (FAQ)</h3>
+      <div class="space-y-3">
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>피보험 단위기간 180일은 근속 6개월과 다른가요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            네, 다릅니다. 피보험 단위기간은 보수 지급의 기초가 된 날(유급근로일 + 주휴일)만 합산합니다. 주 5일 근무자의 경우 주당 6일만 인정되므로, 통상 약 7~8개월 이상 근무해야 180일을 충족할 수 있습니다.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>퇴사 후 언제까지 실업급여를 신청해야 하나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            퇴사일 다음 날로부터 <strong>12개월(1년) 이내</strong>에 본인의 소정급여일수를 모두 지급받아야 합니다. 수급기간이 남아있더라도 퇴사 후 1년이 지나면 잔여 급여가 소멸되므로 퇴사 직후 지체 없이 신청해야 합니다.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-semibold text-sm text-slate-800">
+            <span>실업급여 수급 중 아르바이트나 부업을 해도 되나요?</span>
+            <span class="transition group-open:rotate-180">
+              <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </span>
+          </summary>
+          <p class="mt-2 text-xs text-slate-600 leading-relaxed">
+            월 60시간 이상 근무하거나 사업자등록을 통해 소득이 발생하는 경우 취업으로 간주되어 수급이 중단될 수 있습니다. 일용근로 또는 단기 아르바이트를 한 경우 반드시 실업인정일에 해당 근로 사실과 소득을 정직하게 신고해야 부정수급 처벌을 피할 수 있습니다.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Google AdSense Unit 2 (Bottom Slot) -->
+    <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-6 overflow-hidden">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6421332766487920"
+           data-ad-slot="3416334507"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+           (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-12 py-8 text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <span class="font-bold text-slate-800 text-sm">실업급여 모의계산기</span>
+          <p class="mt-1 text-slate-500 text-[11px]">입력하신 급여 데이터는 브라우저 내부에서만 처리되며 서버로 전송되지 않습니다.</p>
+        </div>
+        <div class="flex items-center gap-4 text-xs font-medium">
+          <a href="/about.html" class="hover:text-teal-600 transition">산정 공식 및 안내</a>
+          <a href="/privacy.html" class="hover:text-teal-600 transition">개인정보처리방침</a>
+          <a href="/sitemap.xml" class="hover:text-teal-600 transition">사이트맵</a>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+        <span>© 2026 Enjoy Onepage. All rights reserved. 본 시뮬레이션은 모의계산용이며 실제 수급 여부는 고용센터 심사에 따릅니다.</span>
+        <span>기준: 고용노동부 고용보험법 및 최저임금 고시</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-4 py-2.5 rounded-xl shadow-xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+    알림 메시지
+  </div>
+
+  <script>
+    (function() {
+      const MAX_DAILY = 66000;
+      // 2025~2026 minimum wage 10,030 KRW * 8 hours * 80% = 64,192 KRW
+      const MIN_DAILY_8H = 64192;
+
+      // Table map [isOver50][periodKey] => days
+      const DURATION_MAP = {
+        under50: {
+          under1: 120,
+          '1to3': 150,
+          '3to5': 180,
+          '5to10': 210,
+          over10: 240
+        },
+        over50: {
+          under1: 120,
+          '1to3': 180,
+          '3to5': 210,
+          '5to10': 240,
+          over10: 270
+        }
+      };
+
+      const ageRadios = document.querySelectorAll('input[name="ageGroup"]');
+      const periodSelect = document.getElementById('insPeriod');
+      const wageInput = document.getElementById('monthlyWage');
+      const wageFormatted = document.getElementById('wageFormatted');
+      const workHoursSelect = document.getElementById('workHours');
+      const capNotice = document.getElementById('capNotice');
+
+      const durationBadge = document.getElementById('durationBadge');
+      const ageBadge = document.getElementById('ageBadge');
+      const resTotalBenefit = document.getElementById('resTotalBenefit');
+      const resDailyBenefit = document.getElementById('resDailyBenefit');
+      const resMonthlyBenefit = document.getElementById('resMonthlyBenefit');
+
+      const shareBtn = document.getElementById('shareBtn');
+      const copyUrlBtn = document.getElementById('copyUrlBtn');
+      const toast = document.getElementById('toast');
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0');
+        }, 2200);
+      }
+
+      function formatNumber(num) {
+        return Math.round(num).toLocaleString('ko-KR');
+      }
+
+      function getSelectedAgeGroup() {
+        for (let r of ageRadios) {
+          if (r.checked) return r.value;
+        }
+        return 'under50';
+      }
+
+      function calculate() {
+        const ageGroup = getSelectedAgeGroup();
+        const periodKey = periodSelect.value;
+        const wage = parseFloat(wageInput.value) || 0;
+        const hours = parseInt(workHoursSelect.value, 10) || 8;
+
+        wageFormatted.textContent = `${formatNumber(wage)}원`;
+
+        // 1. Daily Average Wage = (monthlyWage * 3) / 91
+        const avgDailyWage = (wage * 3) / 91;
+        let rawBenefit = avgDailyWage * 0.6;
+
+        // Lower limit = 10,030 * hours * 0.8
+        const lowerLimit = Math.round(10030 * hours * 0.8);
+        const upperLimit = MAX_DAILY;
+
+        let effectiveDaily = rawBenefit;
+        let noticeHtml = '';
+
+        if (effectiveDaily > upperLimit) {
+          effectiveDaily = upperLimit;
+          noticeHtml = `<strong>⚠️ 상한액 적용:</strong> 계산된 일일 급여가 법정 상한액(${formatNumber(upperLimit)}원)을 초과하여 상한액이 적용됩니다.`;
+        } else if (effectiveDaily < lowerLimit) {
+          effectiveDaily = lowerLimit;
+          noticeHtml = `<strong>💡 하한액 적용:</strong> 최저임금 기준 하한액(${formatNumber(lowerLimit)}원, 1일 ${hours}시간)이 보장 적용됩니다.`;
+        } else {
+          noticeHtml = `<strong>💡 정상 산정:</strong> 퇴사 전 평균임금의 60%인 1일 ${formatNumber(effectiveDaily)}원이 정상 적용됩니다.`;
+        }
+        capNotice.innerHTML = noticeHtml;
+
+        // 2. Duration
+        const days = DURATION_MAP[ageGroup][periodKey] || 150;
+        const total = effectiveDaily * days;
+        const monthly = effectiveDaily * 30;
+
+        durationBadge.textContent = `총 ${days}일 수급 (${(days/30).toFixed(1)}개월)`;
+        ageBadge.textContent = ageGroup === 'under50' ? '만 50세 미만' : '만 50세 이상 / 장애인';
+
+        resTotalBenefit.textContent = formatNumber(total);
+        resDailyBenefit.textContent = `${formatNumber(effectiveDaily)}원`;
+        resMonthlyBenefit.textContent = `${formatNumber(monthly)}원`;
+
+        // Highlight table row
+        const rows = ['under1', '1to3', '3to5', '5to10', 'over10'];
+        rows.forEach(r => {
+          const el = document.getElementById('row' + (r === 'under1' ? 'Under1' : r === '1to3' ? '1to3' : r === '3to5' ? '3to5' : r === '5to10' ? '5to10' : 'Over10'));
+          if (el) {
+            if (r === periodKey) {
+              el.className = 'hover:bg-slate-50 transition bg-teal-50/70 font-bold text-teal-900';
+            } else {
+              el.className = 'hover:bg-slate-50 transition';
+            }
+          }
+        });
+
+        // URL sync
+        const params = new URLSearchParams();
+        params.set('wage', wage);
+        params.set('age', ageGroup);
+        params.set('period', periodKey);
+        params.set('hours', hours);
+        window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+      }
+
+      ageRadios.forEach(r => r.addEventListener('change', calculate));
+      periodSelect.addEventListener('change', calculate);
+      wageInput.addEventListener('input', calculate);
+      workHoursSelect.addEventListener('change', calculate);
+
+      document.querySelectorAll('.quick-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          wageInput.value = btn.dataset.amount;
+          calculate();
+        });
+      });
+
+      document.querySelectorAll('.quick-add').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const current = parseFloat(wageInput.value) || 0;
+          wageInput.value = current + parseFloat(btn.dataset.add);
+          calculate();
+        });
+      });
+
+      shareBtn.addEventListener('click', async () => {
+        const shareData = {
+          title: '실업급여 모의계산 결과',
+          text: '내 예상 실업급여 수급일수와 총 수급액 모의계산 결과를 확인해보세요.',
+          url: window.location.href
+        };
+        if (navigator.share) {
+          try { await navigator.share(shareData); } catch (e) {}
+        } else {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('공유 링크가 복사되었습니다.');
+          });
+        }
+      });
+
+      copyUrlBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('계산 결과 링크가 복사되었습니다.');
+        });
+      });
+
+      function initFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('wage')) wageInput.value = params.get('wage');
+        if (params.has('age')) {
+          const a = params.get('age');
+          ageRadios.forEach(r => { r.checked = (r.value === a); });
+        }
+        if (params.has('period')) periodSelect.value = params.get('period');
+        if (params.has('hours')) workHoursSelect.value = params.get('hours');
+        calculate();
+      }
+
+      initFromUrl();
+    })();
+  </script>
+</body>
+</html>

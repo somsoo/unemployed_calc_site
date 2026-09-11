@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://unemployed.enjoy-onepage.com/sitemap.xml
