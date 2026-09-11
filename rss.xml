@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산</title>
+    <link>https://unemployed.enjoy-onepage.com/</link>
+    <description>퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.</description>
+    <language>ko-KR</language>
+    <lastBuildDate>Sat, 12 Sep 2026 03:00:00 +0900</lastBuildDate>
+    <atom:link href="https://unemployed.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산</title>
+      <link>https://unemployed.enjoy-onepage.com/</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/</guid>
+      <description>퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.</description>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>실업급여 법정 산정 기준 및 수급 요건 | 서비스 소개</title>
+      <link>https://unemployed.enjoy-onepage.com/about.html</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/about.html</guid>
+      <description>실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산의 서비스 소개, 공식 법령 산출 수식 및 데이터 처리 원칙 안내입니다.</description>
+      <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>개인정보처리방침 | 실업급여 계산기</title>
+      <link>https://unemployed.enjoy-onepage.com/privacy.html</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/privacy.html</guid>
+      <description>실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산의 개인정보 보호 정책, 쿠키 사용 및 브라우저 로컬 데이터 보안 원칙입니다.</description>
+      <pubDate>Sat, 12 Sep 2026 01:10:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>자발적 퇴사 실업급여 인정 사유 13가지 기준</title>
+      <link>https://unemployed.enjoy-onepage.com/guides/eligibility-criteria.html</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guides/eligibility-criteria.html</guid>
+      <description>내 발로 나와도 실업급여 받는다! 통근 3시간, 임금체불, 질병퇴사 등 고용보험법 정당한 이직 사유.</description>
+      <pubDate>Sat, 12 Sep 2026 02:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>실업급여 완벽 해결 실무 가이드 및 핵심 요령 | 2026 실업급여 모의계산기</title>
+      <link>https://unemployed.enjoy-onepage.com/guides/guide1.html</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guides/guide1.html</guid>
+      <description>실업급여에 관한 법령 및 공식 산정 기준은 공공기관 훈령과 최신 개정 규정에 따르며, 개별 상황에 따라 적용 요율과 한도가 달라질 수 ...</description>
+      <pubDate>Sat, 12 Sep 2026 02:15:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>실업급여신청방법 주의사항 및 2026년 최신 개정 기준 | 2026 실업급여 모의계산기</title>
+      <link>https://unemployed.enjoy-onepage.com/guides/guide2.html</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guides/guide2.html</guid>
+      <description>실업급여신청방법 관련 분쟁 예방을 위해서는 서면 합의서 및 공식 명세서를 보관하고, 모의 계산기를 통해 예상 결과를 교차 검증하는 절차...</description>
+      <pubDate>Sat, 12 Sep 2026 02:30:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>실업급여 이직확인서 처리기간 180일 확인법</title>
+      <link>https://unemployed.enjoy-onepage.com/guides/self-employed-insurance.html</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guides/self-employed-insurance.html</guid>
+      <description>이직확인서 처리 지연 시 사업주 과태료! 피보험단위기간 180일(유급일수) 정확한 계산법.</description>
+      <pubDate>Sat, 12 Sep 2026 02:45:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>실업급여 상한액 수급기간 계산 2026년 기준</title>
+      <link>https://unemployed.enjoy-onepage.com/guides/unemployment-benefits-guide.html</link>
+      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guides/unemployment-benefits-guide.html</guid>
+      <description>1일 상한액 66,000원과 최저임금 연동 하한액! 연령별 가입기간별 최소 120일~최대 270일 지급표.</description>
+      <pubDate>Sat, 12 Sep 2026 03:00:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>
