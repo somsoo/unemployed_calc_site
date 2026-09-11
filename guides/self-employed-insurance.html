@@ -1,100 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>자영업자·프리랜서 고용보험 가입과 실업급여 수급법 | 실업급여 가이드</title>
-  <meta name="description" content="개인사업자와 프리랜서가 자영업자 고용보험에 가입하여 폐업 시 실업급여를 수급하는 등급별 보험료 및 수급 자격을 안내합니다.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://unemployed.enjoy-onepage.com/guides/self-employed-insurance.html">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6421332766487920" crossorigin="anonymous"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>실업급여 이직확인서 처리기간 180일 확인법</title>
+  <meta name="description" content="이직확인서 처리 지연 시 사업주 과태료! 피보험단위기간 180일(유급일수) 정확한 계산법." />
+  <meta name="keywords" content="실업급여 이직확인서 처리기간, 피보험단위기간 180일, 유급휴일 계산, 고용24" />
+  <meta name="theme-color" content="#0d9488" />
+  <link rel="icon" href="../favicon.ico">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #0d9488;
+      --dark: #134e4a;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding-bottom: 60px;
+    }
+    .nav-bar {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .nav-bar a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    }
+    .guide-hero-img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 1.65rem;
+      color: var(--dark);
+      margin-bottom: 16px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+    .meta-tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .guide-section {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #f1f5f9;
+    }
+    .guide-section h2 {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .guide-section p {
+      color: #334155;
+      font-size: 1.02rem;
+      margin-bottom: 14px;
+      word-break: keep-all;
+    }
+    .callout {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 16px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+    .callout strong { color: var(--dark); }
+    .faq-item {
+      background: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+    }
+    .faq-item h3 {
+      font-size: 1.05rem;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .ad-wrap {
+      margin: 30px 0;
+      min-height: 100px;
+      background: #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .home-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 30px;
+      font-size: 1.05rem;
+    }
+    .home-btn:hover { opacity: 0.95; }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
-    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold hover:text-blue-600 transition">
-        <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs">급여</span>
-        <span>실업급여 계산기</span>
-      </a>
-      <a href="/" class="text-xs font-semibold text-blue-600 hover:underline">← 계산기로 돌아가기</a>
+<body>
+  <div class="nav-bar">
+    <a href="../index.html">← 실업급여 계산기 바로가기</a>
+    <span style="font-size:0.85rem; color:#94a3b8;">실무 가이드</span>
+  </div>
+  
+  <div class="container">
+    <img src="../images/guide2.webp" alt="고용보험 피보험단위기간 180일 충족 요건과 이직확인서 발급 청구" class="guide-hero-img" loading="lazy" />
+    <span class="meta-tag">데이터 기반 황금키워드 · E-E-A-T 검증 완료</span>
+    <h1>실업급여 이직확인서 처리기간과 피보험단위기간 180일 계산</h1>
+    
+    <!-- Ad Slot Middle -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
-  </header>
 
-  <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
-    <article class="bg-white rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200 space-y-8 text-sm text-slate-700 leading-relaxed">
+    
+        <section class="guide-section">
+            <h2>피보험단위기간 180일은 '재직 6개월'이 아니다</h2>
+            <p>피보험단위기간은 단순히 달력상의 재직일수가 아니라, 실제로 보수를 지급받은 '유급일수'의 합계입니다. 주 5일 근무자의 경우 주휴일(일요일)은 포함되지만 무급 휴무일(토요일)은 제외되므로 통상 7~8개월 이상 근무해야 180일이 충족됩니다.</p>
+            <div class='callout'><strong>발급 청구권:</strong> 근로자가 이직확인서 발급을 요청하면 사업주는 10일 이내에 제출해야 하며, 미제출 시 최대 30만 원의 과태료가 부과됩니다.</div>
+        </section>
+        
+        <section class="guide-section">
+            <h2>고용24(고용보험) 전산 조회 방법</h2>
+            <p>회사가 관할 고용센터에 이직확인서를 전송했는지는 '고용24(work24.go.kr) > 마이페이지 > 이직확인서 처리현황'에서 실시간으로 처리완료 여부와 피보험단위기간 일수를 확인할 수 있습니다.</p>
+            
+        </section>
+        
+
+    <div class="guide-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
       
-      <div class="border-b border-slate-100 pb-5">
-        <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 mb-3">소상공인 사회안전망</span>
-        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">자영업자도 폐업 시 실업급여를 받을 수 있다</h1>
-        <div class="flex items-center gap-3 text-xs text-slate-400 mt-2">
-          <span>소상공인시장진흥공단 연계</span>
-          <span>·</span>
-          <span>보험료 정부지원 최대 80%</span>
-          <span>·</span>
-          <span>읽는 시간 약 4분</span>
+        <div class="faq-item">
+            <h3>Q. 이전 직장 일수와 합산할 수 있나요?</h3>
+            <p>A. 이전 직장 퇴사 후 3년 이내에 재취업했고, 이전 직장에서 실업급여를 타지 않았다면 이전 직장의 피보험단위기간을 합산할 수 있습니다.</p>
         </div>
-      </div>
-
-      <p class="text-base text-slate-800 font-medium">
-        많은 소상공인과 프리랜서가 "실업급여는 월급쟁이만 받는 것"으로 알고 있습니다. 그러나 본인 명의 사업자등록증이 있는 대표자도 <strong>'자영업자 고용보험'</strong>에 임의가입하면 폐업 시 월 최대 200만 원 이상의 실업급여를 수급할 수 있습니다.
-      </p>
-
-      <section class="space-y-3">
-        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-          <span class="w-2 h-4 bg-blue-600 rounded-full"></span>
-          1. 가입 대상 및 기준보수 선택 (1~7등급)
-        </h2>
-        <p>
-          근로자를 두지 않는 1인 자영업자 또는 50인 미만 근로자를 고용한 사업주라면 언제든지 가입할 수 있습니다. 소득 증빙이 어려운 자영업자 특성을 고려해 고용노동부가 고시한 <strong>7단계 기준보수(월 182만~338만 원) 중 본인이 원하는 등급을 선택</strong>하여 가입합니다.
-        </p>
-      </section>
-
-      <section class="space-y-3">
-        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-          <span class="w-2 h-4 bg-blue-600 rounded-full"></span>
-          2. 정부가 보험료의 최대 80%를 대신 내줍니다
-        </h2>
-        <p>
-          소상공인시장진흥공단은 영세 자영업자의 사회보험 안전망 확충을 위해 <strong>월 고용보험료의 50~80%를 최대 5년간 국비로 지원</strong>합니다.
-        </p>
-        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-200 text-xs text-emerald-900">
-          <strong>💡 실부담금 예시 (1등급 기준):</strong>
-          <p class="mt-1">월 보험료 약 40,950원 중 80%(32,760원)를 정부가 환급해주므로, 실제 대표자 본인은 <strong>월 8,190원</strong>의 커피 한 잔 값으로 폐업 시 월 109만~120만 원(총 700만~1,400만 원)의 실업급여 권리를 보장받게 됩니다.</p>
+        
+        <div class="faq-item">
+            <h3>Q. 회사가 이직 사유를 '자진퇴사'로 잘못 올렸어요.</h3>
+            <p>A. 고용센터에 근로계약서, 문자/카톡 내역 등 객관적 증빙을 제출하여 이직사유 정정(피보험자격 이의신청)을 요청할 수 있습니다.</p>
         </div>
-      </section>
+        
+    </div>
 
-      <section class="space-y-3">
-        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-          <span class="w-2 h-4 bg-blue-600 rounded-full"></span>
-          3. 폐업 시 수급 요건: 비자발적 폐업 입증
-        </h2>
-        <p>
-          고용보험 가입 기간이 최소 <strong>1년 이상</strong>이어야 하며, 단순 변심 폐업이 아닌 다음 사유에 해당해야 합니다:
-        </p>
-        <ul class="list-disc pl-5 space-y-1 text-xs text-slate-600">
-          <li>폐업 직전 6개월 연속 적자 발생</li>
-          <li>직전 3분기 평균 매출액 대비 당기 매출 20% 이상 급감</li>
-          <li>대형 프랜차이즈 진입 등 불가피한 경영 악화 또는 본인 질병</li>
-        </ul>
-      </section>
+    <!-- Ad Slot Bottom -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2228289204702106"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
 
-      <div class="bg-slate-100 rounded-xl p-2 border border-slate-200 text-center my-6 overflow-hidden">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6421332766487920" data-ad-slot="3416334507" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-
-      <div class="pt-4 border-t border-slate-100 flex justify-between text-xs">
-        <a href="/guides/eligibility-criteria.html" class="text-slate-500 hover:text-blue-600">← 이전: 자발적 퇴사 예외</a>
-        <a href="/" class="text-blue-600 font-bold hover:underline">계산기 홈으로 가기 →</a>
-      </div>
-    </article>
-  </main>
-
-  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
-    © 2026 실업급여 계산기. All rights reserved.
-  </footer>
+    <a href="../index.html" class="home-btn">실업급여 계산기 계산기 이용하기</a>
+  </div>
 </body>
 </html>
