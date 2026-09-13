@@ -74,6 +74,18 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
 
+    <!-- 상단 슬림 띠배너 (헤더 직하단: 50~60px 슬림형) -->
+    <div class="manual-ad-box ad-top-banner" style="width: 100%; max-width: 960px; margin: 8px auto 16px; overflow: hidden; text-align: center; min-height: 50px; max-height: 60px;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:100%;height:60px;"
+             data-ad-client="ca-pub-2228289204702106"
+             data-ad-slot="3824727725"
+             data-ad-format="horizontal"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
   <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2 text-slate-900 font-bold text-lg hover:text-teal-600 transition">
@@ -114,19 +126,7 @@
     </div>
   </section>
   <main class="max-w-4xl mx-auto px-4 py-4 w-full flex-grow">
-    <!-- 상단 슬림 띠배너 (헤더 직하단: 50~90px 반응형) -->
-    <div class="manual-ad-box ad-top-banner" style="width: 100%; max-width: 960px; margin: 12px auto 20px; overflow: hidden; text-align: center; min-height: 50px; max-height: 90px;">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:100%;height:60px;"
-             data-ad-client="ca-pub-2228289204702106"
-             data-ad-slot="3824727725"
-             data-ad-format="horizontal"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+    
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
       
@@ -385,7 +385,19 @@
            (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
-  </main>
+      <!-- 본문 중간 반응형 배너 -->
+    <div class="manual-ad-box ad-mid-banner" style="width: 100%; max-width: 960px; margin: 20px auto; overflow: hidden; text-align: center;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2228289204702106"
+             data-ad-slot="1186914926"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+</main>
 
   <!-- Footer -->
   <footer class="bg-white border-t border-slate-200 mt-12 py-8 text-xs text-slate-500">
@@ -407,6 +419,18 @@
       </div>
     </div>
   </footer>
+
+    <!-- 하단 대형 배너 (푸터 직전) -->
+    <div class="manual-ad-box ad-bottom-banner" style="width: 100%; max-width: 960px; margin: 24px auto 16px; overflow: hidden; text-align: center;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-2228289204702106"
+             data-ad-slot="3416334507"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
 
   <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-xs px-4 py-2.5 rounded-xl shadow-xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
     알림 메시지
@@ -647,6 +671,59 @@
         }, 2200);
       }
     });
+  </script>
+
+  <!-- Global UX Helper: Universal Result Copy & Toast -->
+  <script>
+    window.showToastNotification = function(msg) {
+      let toast = document.getElementById('global-ux-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'global-ux-toast';
+        toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:12px 24px;border-radius:9999px;font-size:14px;font-weight:600;box-shadow:0 10px 25px rgba(0,0,0,0.2);z-index:9999;transition:all 0.3s ease;opacity:0;pointer-events:none;';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateX(-50%) translateY(0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(10px)';
+      }, 2200);
+    };
+
+    window.copyResultToClipboard = function(customText) {
+      let textToCopy = customText;
+      if (!textToCopy) {
+        const resEl = document.querySelector('#resultBox, .result-card, #result, [id*="result"], [class*="result"], [id*="res"]');
+        textToCopy = resEl ? resEl.innerText.trim() : document.title;
+      }
+      const fullText = textToCopy + "\n\n👉 바로가기: " + window.location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullText).then(() => {
+          window.showToastNotification('결과가 클립보드에 복사되었습니다! 🎉');
+        }).catch(() => fallbackCopy(fullText));
+      } else {
+        fallbackCopy(fullText);
+      }
+    };
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        window.showToastNotification('결과가 클립보드에 복사되었습니다! 🎉');
+      } catch (e) {
+        window.showToastNotification('복사에 실패했습니다.');
+      }
+      document.body.removeChild(ta);
+    }
   </script>
 
 </body>
