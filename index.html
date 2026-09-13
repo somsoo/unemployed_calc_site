@@ -40,7 +40,7 @@
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript. Requires HTML5.",
-        "description": "고용보험법 기준 1일 구직급여액(상한액 66,000원, 하한액 64,192원)과 연령·가입기간별 소정급여일수(120~270일)를 실시간 모의계산합니다.",
+        "description": "고용보험법 기준 1일 구직급여액(상한액 68,100원, 하한액 66,048원)과 연령·가입기간별 소정급여일수(120~270일)를 실시간 모의계산합니다.",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
       },
       {
@@ -60,7 +60,7 @@
             "name": "실업급여 1일 상한액과 하한액은 얼마인가요?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "1일 구직급여 상한액은 66,000원이며, 하한액은 최저임금의 80% 기준으로 64,192원(1일 8시간 근로 기준)입니다."
+              "text": "1일 구직급여 상한액은 68,100원이며, 하한액은 최저임금(10,320원)의 80% 기준으로 66,048원(1일 8시간 근로 기준)입니다."
             }
           }
         ]
@@ -208,7 +208,7 @@
         </div>
 
         <div id="capNotice" class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-[11px] text-teal-800 leading-relaxed">
-          <strong>💡 상·하한액 자동 적용:</strong> 1일 상한액 66,000원, 하한액 64,192원(8시간 기준) 사이에서 자동 보정됩니다.
+          <strong>💡 상·하한액 자동 적용:</strong> 1일 상한액 68,100원, 하한액 66,048원(8시간 기준) 사이에서 자동 보정됩니다.
         </div>
       </section>
 
@@ -414,9 +414,9 @@
 
   <script>
     (function() {
-      const MAX_DAILY = 66000;
-      // 2025~2026 minimum wage 10,030 KRW * 8 hours * 80% = 64,192 KRW
-      const MIN_DAILY_8H = 64192;
+      const MAX_DAILY = 68100;
+      // 2025~2026 minimum wage 10,320 KRW * 8 hours * 80% = 64,192 KRW
+      const MIN_DAILY_8H = 66048;
 
       // Table map [isOver50][periodKey] => days
       const DURATION_MAP = {
@@ -486,8 +486,8 @@
         const avgDailyWage = (wage * 3) / 91;
         let rawBenefit = avgDailyWage * 0.6;
 
-        // Lower limit = 10,030 * hours * 0.8
-        const lowerLimit = Math.round(10030 * hours * 0.8);
+        // Lower limit = 10,320 * hours * 0.8
+        const lowerLimit = Math.round(10320 * hours * 0.8);
         const upperLimit = MAX_DAILY;
 
         let effectiveDaily = rawBenefit;
