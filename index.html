@@ -24,44 +24,57 @@
 <link href="/icon.png" rel="apple-touch-icon"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebApplication",
-        "@id": "https://unemployed.enjoy-onepage.com/#webapp",
-        "name": "실업급여 계산기",
-        "url": "https://unemployed.enjoy-onepage.com/",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "All",
-        "browserRequirements": "Requires JavaScript. Requires HTML5.",
-        "description": "고용보험법 기준 1일 구직급여액(상한액 68,100원, 하한액 66,048원)과 연령·가입기간별 소정급여일수(120~270일)를 실시간 모의계산합니다.",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://unemployed.enjoy-onepage.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "실업급여 수급 자격 조건은 무엇인가요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "이직일 이전 18개월간 피보험 단위기간이 통산 180일 이상이어야 하며, 비자발적 이직(권고사직, 계약만료, 정년 등) 사유여야 합니다."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "실업급여 1일 상한액과 하한액은 얼마인가요?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "1일 구직급여 상한액은 68,100원이며, 하한액은 최저임금(10,320원)의 80% 기준으로 66,048원(1일 8시간 근로 기준)입니다."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://unemployed.enjoy-onepage.com/#webapp",
+      "name": "내 실업급여 수급일수와 예상 수령액은?",
+      "url": "https://unemployed.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.",
+      "image": "https://unemployed.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://unemployed.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "내 실업급여 수급일수와 예상 수령액은? 이용 시 비용이 발생하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "아닙니다. 내 실업급여 수급일수와 예상 수령액은?는 회원가입이나 결제 없이 누구나 브라우저에서 100% 무료로 무제한 이용할 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "입력한 개인정보나 데이터가 서버에 저장되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "절대 저장되지 않습니다. 모든 연산과 데이터 처리는 사용자의 기기 브라우저 메모리 내에서만 로컬 연산되며 외부 서버로 전송되지 않습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "스마트폰 모바일 브라우저에서도 사용 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 아이폰(Safari), 안드로이드(Chrome, 삼성인터넷) 등 모든 모바일 기기 화면에 최적화된 반응형 웹앱으로 편리하게 이용하실 수 있습니다."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 <link href="https://unemployed.enjoy-onepage.com/rss.xml" rel="alternate" title="실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산 RSS Feed" type="application/rss+xml"/>
 <link href="https://unemployed.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
