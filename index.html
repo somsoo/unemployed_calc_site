@@ -52,33 +52,33 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "내 실업급여 수급일수와 예상 수령액은? 이용 시 비용이 발생하나요?",
+          "name": "피보험 단위기간 180일은 근속 6개월과 다른가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "아닙니다. 내 실업급여 수급일수와 예상 수령액은?는 회원가입이나 결제 없이 누구나 브라우저에서 100% 무료로 무제한 이용할 수 있습니다."
+            "text": "네, 다릅니다. 피보험 단위기간은 보수 지급의 기초가 된 날(유급근로일 + 주휴일)만 합산합니다. 주 5일 근무자의 경우 주당 6일만 인정되므로, 통상 약 7~8개월 이상 근무해야 180일을 충족할 수 있습니다."
           }
         },
         {
           "@type": "Question",
-          "name": "입력한 개인정보나 데이터가 서버에 저장되나요?",
+          "name": "퇴사 후 언제까지 실업급여를 신청해야 하나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "절대 저장되지 않습니다. 모든 연산과 데이터 처리는 사용자의 기기 브라우저 메모리 내에서만 로컬 연산되며 외부 서버로 전송되지 않습니다."
+            "text": "퇴사일 다음 날로부터 12개월(1년) 이내에 본인의 소정급여일수를 모두 지급받아야 합니다. 수급기간이 남아있더라도 퇴사 후 1년이 지나면 잔여 급여가 소멸되므로 퇴사 직후 지체 없이 신청해야 합니다."
           }
         },
         {
           "@type": "Question",
-          "name": "스마트폰 모바일 브라우저에서도 사용 가능한가요?",
+          "name": "실업급여 수급 중 아르바이트나 부업을 해도 되나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "네, 아이폰(Safari), 안드로이드(Chrome, 삼성인터넷) 등 모든 모바일 기기 화면에 최적화된 반응형 웹앱으로 편리하게 이용하실 수 있습니다."
+            "text": "월 60시간 이상 근무하거나 사업자등록을 통해 소득이 발생하는 경우 취업으로 간주되어 수급이 중단될 수 있습니다. 일용근로 또는 단기 아르바이트를 한 경우 반드시 실업인정일에 해당 근로 사실과 소득을 정직하게 신고해야 부정수급 처벌을 피할 수 있습니다."
           }
         }
       ]
     }
   ]
 }
-  </script>
+</script>
 <link href="https://unemployed.enjoy-onepage.com/rss.xml" rel="alternate" title="실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산 RSS Feed" type="application/rss+xml"/>
 <link href="https://unemployed.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
 <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script><style id="layout-shield">
@@ -206,7 +206,7 @@
 </div>
 <!-- 고용보험 가입기간 -->
 <div class="mb-4">
-<label class="block text-xs font-bold text-slate-700 mb-1.5" for="insPeriod">고용보험 총 가입기간 (피보험단위기간)</label>
+<label class="block text-xs font-bold text-slate-700 mb-1.5" for="insPeriod">고용보험 가입기간 (피보험기간)</label>
 <select class="w-full bg-slate-50 border rounded-xl px-3 py-2.5 font-semibold text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" id="insPeriod">
 <option value="under1">1년 미만 (최소 180일 이상)</option>
 <option selected="" value="1to3">1년 이상 ~ 3년 미만</option>
@@ -259,24 +259,24 @@
 <div class="bg-gradient-to-br from-teal-600 to-cyan-700 rounded-2xl p-5 text-white shadow-lg relative overflow-hidden">
 <div class="relative z-10">
 <div class="flex items-center justify-between">
-<span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-sm" id="durationBadge">총 150일 수급</span>
-<span class="text-xs text-teal-100 font-medium" id="ageBadge">만 50세 미만 (1~3년)</span>
+<span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-sm" id="durationBadge">총 150일 수급 (5.0개월)</span>
+<span class="text-xs text-teal-100 font-medium" id="ageBadge">만 50세 미만</span>
 </div>
 <div class="mt-4">
 <div class="text-xs text-teal-200 font-medium">총 예상 수급액 합계</div>
 <div class="flex items-baseline gap-2 mt-1">
-<span class="text-3xl sm:text-4xl font-black tracking-tight" id="resTotalBenefit">9,774,000</span>
+<span class="text-3xl sm:text-4xl font-black tracking-tight" id="resTotalBenefit">9,907,200</span>
 <span class="text-lg font-bold text-teal-100">원</span>
 </div>
 </div>
 <div class="mt-4 pt-4 border-t border-white/20 grid grid-cols-2 gap-3">
 <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
 <div class="text-[11px] text-teal-200 font-medium">1일 구직급여액</div>
-<div class="text-base font-bold text-amber-300 mt-0.5" id="resDailyBenefit">65,160원</div>
+<div class="text-base font-bold text-amber-300 mt-0.5" id="resDailyBenefit">66,048원</div>
 </div>
 <div class="bg-white/10 rounded-xl p-3 backdrop-blur-sm">
 <div class="text-[11px] text-teal-200 font-medium">월 수령 예상액 (30일 기준)</div>
-<div class="text-base font-bold text-white mt-0.5" id="resMonthlyBenefit">1,954,800원</div>
+<div class="text-base font-bold text-white mt-0.5" id="resMonthlyBenefit">1,981,440원</div>
 </div>
 </div>
 </div>
@@ -285,7 +285,7 @@
 <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
 <div class="flex items-center justify-between mb-3">
 <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">연령 및 가입기간별 소정급여일수 기준표</h3>
-<span class="text-[10px] text-slate-400">고용보험법 제50조</span>
+<span class="text-[10px] text-slate-400">고용보험법 제50조 별표 1</span>
 </div>
 <div class="overflow-x-auto">
 <table class="w-full text-xs text-left">
@@ -325,6 +325,7 @@
 </tbody>
 </table>
 </div>
+<p class="mt-2 text-[10px] text-slate-400 leading-relaxed">기준: 고용보험법 제45·46·50조, 시행령 제68조(기초일액 상한 11만3500원 → 1일 상한 68,100원), 2026년 최저임금 시간급 10,320원(고용노동부고시 제2025-47호) · 2026년 10월 확인. 실제 금액은 고용센터가 이직 전 3개월 임금과 소정근로시간으로 정합니다.</p>
 </div>
 <!-- Deep-Dive Guides Section (전문 서브페이지 링크) -->
 
@@ -465,8 +466,9 @@
   </div>
 <script>
     (function() {
+      // 2026: 기초일액 상한 113,500원(고용보험법 시행령 제68조, 2025. 12. 23. 개정) x 60% = 68,100원
       const MAX_DAILY = 68100;
-      // 2025~2026 minimum wage 10,320 KRW * 8 hours * 80% = 64,192 KRW
+      // 2026: 최저임금 시간급 10,320원(고용노동부고시 제2025-47호) x 8시간 x 80% = 66,048원 (법 제45조④·제46조)
       const MIN_DAILY_8H = 66048;
 
       // Table map [isOver50][periodKey] => days
@@ -544,13 +546,15 @@
         let effectiveDaily = rawBenefit;
         let noticeHtml = '';
 
+        // 상한(기초일액 상한의 60%)을 먼저 적용한 뒤, 최저구직급여일액보다 낮으면 최저액 (고용보험법 제46조②: 최저액이 우선)
         if (effectiveDaily > upperLimit) {
           effectiveDaily = upperLimit;
           noticeHtml = `<strong>⚠️ 상한액 적용:</strong> 계산된 일일 급여가 법정 상한액(${formatNumber(upperLimit)}원)을 초과하여 상한액이 적용됩니다.`;
-        } else if (effectiveDaily < lowerLimit) {
+        }
+        if (effectiveDaily < lowerLimit) {
           effectiveDaily = lowerLimit;
           noticeHtml = `<strong>💡 하한액 적용:</strong> 최저임금 기준 하한액(${formatNumber(lowerLimit)}원, 1일 ${hours}시간)이 보장 적용됩니다.`;
-        } else {
+        } else if (!noticeHtml) {
           noticeHtml = `<strong>💡 정상 산정:</strong> 퇴사 전 평균임금의 60%인 1일 ${formatNumber(effectiveDaily)}원이 정상 적용됩니다.`;
         }
         capNotice.innerHTML = noticeHtml;
@@ -620,6 +624,8 @@
         } else {
           navigator.clipboard.writeText(window.location.href).then(() => {
             showToast('공유 링크가 복사되었습니다.');
+          }).catch(() => {
+            showToast('복사하지 못했습니다. 주소창의 주소를 직접 복사하세요.');
           });
         }
       });
@@ -627,6 +633,8 @@
       copyUrlBtn.addEventListener('click', () => {
         navigator.clipboard.writeText(window.location.href).then(() => {
           showToast('계산 결과 링크가 복사되었습니다.');
+        }).catch(() => {
+          showToast('복사하지 못했습니다. 주소창의 주소를 직접 복사하세요.');
         });
       });
 
