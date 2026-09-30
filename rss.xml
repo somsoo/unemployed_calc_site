@@ -5,7 +5,7 @@
     <link>https://unemployed.enjoy-onepage.com/</link>
     <description>퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 01 Oct 2026 03:12:25 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 03:39:35 +0900</lastBuildDate>
     <atom:link href="https://unemployed.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>실업급여 계산기 | 수급기간 및 일일수급액 모의계산</title>
@@ -13,13 +13,6 @@
       <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/</guid>
       <description>퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.</description>
       <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>실업급여 법정 산정 기준 및 수급 요건 | 서비스 소개</title>
-      <link>https://unemployed.enjoy-onepage.com/about.html</link>
-      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/about.html</guid>
-      <description>고용보험법에 따른 실업급여 1일 상·하한액 산출 공식, 피보험단위기간 180일 기준, 수급자격 인정 사유를 안내합니다.</description>
-      <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
     </item>
     <item>
       <title>개인정보처리방침 | 실업급여 계산기</title>
