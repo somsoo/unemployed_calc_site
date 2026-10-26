@@ -1,25 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>실업급여 계산기 | 수급기간 및 일일수급액 모의계산</title>
-    <link>https://unemployed.enjoy-onepage.com/</link>
-    <description>퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.</description>
-    <language>ko-KR</language>
-    <lastBuildDate>Thu, 01 Oct 2026 03:39:35 +0900</lastBuildDate>
-    <atom:link href="https://unemployed.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>실업급여 계산기 | 수급기간 및 일일수급액 모의계산</title>
-      <link>https://unemployed.enjoy-onepage.com/</link>
-      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/</guid>
-      <description>퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산합니다.</description>
-      <pubDate>Sat, 12 Sep 2026 00:00:00 +0900</pubDate>
-    </item>
-    <item>
-      <title>개인정보처리방침 | 실업급여 계산기</title>
-      <link>https://unemployed.enjoy-onepage.com/privacy.html</link>
-      <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/privacy.html</guid>
-      <description>실업급여 계산기의 개인정보처리방침입니다. 사용자가 입력한 급여 및 이직 데이터는 서버로 전송되지 않으며 기기 내에서만 연산됩니다.</description>
-      <pubDate>Sat, 12 Sep 2026 01:10:00 +0900</pubDate>
-    </item>
-  </channel>
+<channel>
+  <title>실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산</title>
+  <link>https://unemployed.enjoy-onepage.com/</link>
+  <description>퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산하고 명세서 PNG로 저장합니다.</description>
+  <language>ko-KR</language>
+  <atom:link href="https://unemployed.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Mon, 26 Oct 2026 00:03:42 +0000</lastBuildDate>
+  <item>
+    <title>실업급여 180일 조건 계산 | 피보험단위기간·수급요건</title>
+    <link>https://unemployed.enjoy-onepage.com/guide-eligibility-180days.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guide-eligibility-180days.html</guid>
+    <description>고용보험법 제40조의 피보험단위기간 180일 산정 방식(근무일+유급주휴일)과 수급 요건을 안내합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:44 +0900</pubDate>
+  </item>
+  <item>
+    <title>단시간·알바 실업급여 계산기 | 4시간·6시간 비례 하한액</title>
+    <link>https://unemployed.enjoy-onepage.com/guide-part-time.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guide-part-time.html</guid>
+    <description>1일 소정근로시간 4시간(하한 33,024원)·6시간(49,536원) 단시간 근로자의 구직급여를 계산합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:44 +0900</pubDate>
+  </item>
+  <item>
+    <title>50세 이상·장애인 실업급여 | 최대 270일 수급일수표</title>
+    <link>https://unemployed.enjoy-onepage.com/guide-over50.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/guide-over50.html</guid>
+    <description>이직일 기준 만 50세 이상 및 장애인 근로자의 피보험기간별 우대 수급일수(120~270일)를 계산합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>월급 350만원 이상 실업급여 | 2026 상한액 68,100원</title>
+    <link>https://unemployed.enjoy-onepage.com/wage-max-cap.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/wage-max-cap.html</guid>
+    <description>고용보험법 시행령 제68조에 따른 2026년 구직급여 1일 상한액(68,100원) 적용 구간 총액표입니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>월급 200만~300만원 실업급여 | 2026 하한액 66,048원</title>
+    <link>https://unemployed.enjoy-onepage.com/wage-min-floor.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/wage-min-floor.html</guid>
+    <description>2026년 최저임금(10,320원) 80%가 적용되는 1일 하한액(66,048원) 구간 월별·기간별 수령액표입니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>10년 이상 실업급여 계산기 | 최대 240일·270일 수령액</title>
+    <link>https://unemployed.enjoy-onepage.com/period-over10.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/period-over10.html</guid>
+    <description>피보험기간 10년 이상 장기근속 퇴사자의 240일·270일(최대 1,838만원) 구직급여를 계산합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>5년~10년 실업급여 계산기 | 210일·240일 총지급액</title>
+    <link>https://unemployed.enjoy-onepage.com/period-5to10.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/period-5to10.html</guid>
+    <description>피보험기간 5년 이상 10년 미만 근로자의 210일·240일 실업급여 일액과 총수령액을 계산합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>3년~5년 실업급여 계산기 | 180일·210일 수령액 비교</title>
+    <link>https://unemployed.enjoy-onepage.com/period-3to5.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/period-3to5.html</guid>
+    <description>피보험기간 3년 이상 5년 미만 퇴사자의 180일(50세 미만)·210일(50세 이상) 구직급여를 계산합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>1년~3년 실업급여 계산기 | 150일·180일 총수령액표</title>
+    <link>https://unemployed.enjoy-onepage.com/period-1to3.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/period-1to3.html</guid>
+    <description>고용보험 피보험기간 1년 이상 3년 미만 근로자의 연령별(150일·180일) 구직급여 총액을 계산합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>1년 미만 실업급여 계산기 | 120일 수급액·180일 조건</title>
+    <link>https://unemployed.enjoy-onepage.com/period-under1.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/period-under1.html</guid>
+    <description>고용보험 가입기간 1년 미만(피보험단위기간 180일 이상) 퇴사자의 120일 실업급여 총액을 계산합니다.</description>
+    <pubDate>Mon, 26 Oct 2026 09:03:43 +0900</pubDate>
+  </item>
+  <item>
+    <title>개인정보처리방침 | 실업급여 계산기</title>
+    <link>https://unemployed.enjoy-onepage.com/privacy.html</link>
+    <guid isPermaLink="true">https://unemployed.enjoy-onepage.com/privacy.html</guid>
+    <description>실업급여 계산기의 개인정보처리방침입니다. 사용자가 입력한 급여 및 이직 데이터는 서버로 전송되지 않으며 기기 내에서만 연산됩니다.</description>
+    <pubDate>Fri, 11 Sep 2026 12:04:28 +0900</pubDate>
+  </item>
+</channel>
 </rss>

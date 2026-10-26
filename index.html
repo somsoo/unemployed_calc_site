@@ -7,6 +7,7 @@
 
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <!-- PAGE:HEAD START -->
   <title>실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산</title>
   <meta content="퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 실업급여 수급일수와 월 실수령액, 총 수급액을 즉시 계산하고 명세서 PNG로 저장합니다." name="description"/>
   <meta content="실업급여 계산기, 실업급여 수급자격, 구직급여 모의계산, 실업급여 상한액, 실업급여 하한액, 고용보험 수급기간, 실업급여 명세서" name="keywords"/>
@@ -81,6 +82,7 @@
   </script>
   <link href="https://unemployed.enjoy-onepage.com/rss.xml" rel="alternate" title="실업급여 계산기 | 2026년 수급기간 및 일일수급액 모의계산 RSS Feed" type="application/rss+xml"/>
   <link href="https://unemployed.enjoy-onepage.com/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
+  <!-- PAGE:HEAD END -->
   <script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
 
   <!-- Global Guards & Layout Shields -->
@@ -972,6 +974,191 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+
+    /* Sublinks Navigation Cards */
+    .sublinks-section {
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+    .sublinks-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.25rem;
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .sublinks-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .sublinks-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      width: 100%;
+    }
+    .sublinks-card-title {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .sublinks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 100%;
+    }
+    .sublink-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0.75rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.15s;
+      gap: 0.5rem;
+    }
+    .sublink-item:hover {
+      background: #f0fdfa;
+      border-color: #0d9488;
+    }
+    .sublink-title {
+      font-size: 0.775rem;
+      font-weight: 800;
+      color: #1e293b;
+    }
+    .sublink-item:hover .sublink-title {
+      color: #0f766e;
+    }
+    .sublink-desc {
+      font-size: 0.675rem;
+      color: #64748b;
+      margin-top: 2px;
+    }
+    .sublink-arrow {
+      color: #94a3b8;
+      font-weight: 700;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    /* Extra Comparison Block for Subpages */
+    .extra-section {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      width: 100%;
+      overflow: hidden;
+    }
+    @media (max-width: 640px) {
+      .extra-section {
+        padding: 1rem 0.65rem;
+        border-radius: 14px;
+      }
+    }
+    .extra-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+    }
+    .extra-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .extra-unit {
+      font-size: 0.675rem;
+      color: #94a3b8;
+    }
+    .extra-desc {
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-bottom: 0.85rem;
+      line-height: 1.4;
+    }
+    .table-container {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    .extra-table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      font-size: 0.7rem;
+      text-align: center;
+    }
+    .extra-table th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      padding: 0.45rem 0.2rem;
+      border-bottom: 1px solid #e2e8f0;
+      white-space: normal;
+      line-height: 1.25;
+    }
+    .extra-table td {
+      padding: 0.45rem 0.2rem;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .extra-table tr.active-row td {
+      background: #ccfbf1;
+      color: #0f766e;
+      font-weight: 800;
+    }
+    .checkpoints-card {
+      margin-top: 1rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+    }
+    .checkpoints-title {
+      font-size: 0.775rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .checkpoints-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .checkpoints-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      font-size: 0.725rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+    .checkpoints-bullet {
+      color: #0d9488;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
   </style>
 
   <script id="math-guard">
@@ -1019,6 +1206,7 @@
   <main class="main-wrap">
     <!-- Hero Section -->
     <section class="hero-section">
+      <!-- PAGE:HERO START -->
       <div class="hero-badge">
         <span>📋</span>
         <span>2026 고용보험법 최신 상·하한액 공식 반영</span>
@@ -1027,10 +1215,11 @@
       <p class="hero-desc">
         퇴사 전 월급과 고용보험 가입기간, 연령을 입력하면 일일 구직급여액과 총 수령액을 즉시 산출하고 수급 명세서 PNG로 저장합니다.
       </p>
+      <!-- PAGE:HERO END -->
     </section>
 
     <!-- Main Calculation Grid -->
-    <div class="app-grid">
+    <div class="app-grid grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
       <!-- Left Column: Input Form Card -->
       <section class="form-card">
         <h2 class="card-title">
@@ -1091,13 +1280,13 @@
           <div class="preset-chips-grid">
             <button class="preset-chip" data-amount="2000000" type="button">200만</button>
             <button class="preset-chip" data-amount="2500000" type="button">250만</button>
-            <button class="preset-chip" data-amount="3000000" type="button">300만</button>
+            <button class="preset-chip quick-btn" data-amount="3000000" type="button">300만</button>
             <button class="preset-chip" data-amount="4000000" type="button">400만</button>
           </div>
           <!-- Quick Add Chips -->
           <div class="add-chips-grid">
             <button class="add-chip" data-add="100000" type="button">+10만</button>
-            <button class="add-chip" data-add="500000" type="button">+50만</button>
+            <button class="add-chip quick-add" data-add="500000" type="button">+50만</button>
             <button class="add-chip" data-add="1000000" type="button">+100만</button>
           </div>
         </div>
@@ -1135,6 +1324,7 @@
             <div class="statement-meta-row">
               <span class="statement-date" id="statementDate">2026.10.20</span>
               <span class="statement-badge" id="ageBadge">만 50세 미만</span>
+              <span class="statement-badge" style="background:#e0f2fe; color:#0369a1;" id="durationBadge">총 150일 수급 (5.0개월)</span>
             </div>
           </div>
 
@@ -1215,6 +1405,7 @@
                 </tr>
               </tbody>
             </table>
+            <p class="mt-2 text-[10px] text-slate-400 leading-relaxed" style="font-size:0.68rem; color:#94a3b8; margin-top:0.5rem; line-height:1.5;">기준: 고용보험법 제45·46·50조, 시행령 제68조(기초일액 상한 11만3500원 → 1일 상한 68,100원), 2026년 최저임금 시간급 10,320원(고용노동부고시 제2025-47호) · 2026년 10월 확인. 실제 금액은 고용센터가 이직 전 3개월 임금과 소정근로시간으로 정합니다.</p>
           </div>
 
           <!-- SMART 2-TIER ACTION TOOLBAR (User Design Mandate) -->
@@ -1227,7 +1418,7 @@
               <span>📋</span>
               <span>정산 요약 복사</span>
             </button>
-            <button class="toolbar-btn outline" id="btnShare" onclick="shareUnemploymentResult()" type="button">
+            <button class="toolbar-btn outline" id="copyUrlBtn" onclick="shareUnemploymentResult()" type="button">
               <span>🔗</span>
               <span>결과 공유</span>
             </button>
@@ -1235,6 +1426,102 @@
         </div>
       </section>
     </div>
+
+    <!-- PAGE:EXTRA START --><!-- PAGE:EXTRA END -->
+
+    <!-- PAGE:SUBLINKS START -->
+    <section class="sublinks-section">
+      <div class="sublinks-grid">
+        <!-- Sublinks Card 1: By Period & Age -->
+        <div class="sublinks-card">
+          <h3 class="sublinks-card-title">
+            <span>📊 가입기간·연령별 실업급여 수급일수 &amp; 총액 계산표</span>
+          </h3>
+          <div class="sublinks-list">
+            <a class="sublink-item" href="/period-under1.html">
+              <div>
+                <div class="sublink-title">1년 미만 (120일 · 792만~)</div>
+                <div class="sublink-desc">피보험기간 1년 미만(최소 180일 이상) 120일 기본 수급액</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/period-1to3.html">
+              <div>
+                <div class="sublink-title">1년~3년 (150·180일)</div>
+                <div class="sublink-desc">1년 이상 3년 미만 연령별(50세 미만 150일·이상 180일) 총액</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/period-3to5.html">
+              <div>
+                <div class="sublink-title">3년~5년 (180·210일)</div>
+                <div class="sublink-desc">3년 이상 5년 미만 연령별(50세 미만 180일·이상 210일) 비교</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/period-5to10.html">
+              <div>
+                <div class="sublink-title">5년~10년 (210·240일)</div>
+                <div class="sublink-desc">5년 이상 10년 미만 연령별(210일·240일) 총지급액 산출</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/period-over10.html">
+              <div>
+                <div class="sublink-title">10년 이상 (240·270일)</div>
+                <div class="sublink-desc">10년 이상 장기근속자 최대 240일·270일(최대 1,838만원)</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sublinks Card 2: By Wage Cap/Floor & Rules -->
+        <div class="sublinks-card">
+          <h3 class="sublinks-card-title">
+            <span>📌 2026 상·하한액 및 특수 조건별 실업급여 계산</span>
+          </h3>
+          <div class="sublinks-list">
+            <a class="sublink-item" href="/wage-min-floor.html">
+              <div>
+                <div class="sublink-title">월급 200~300만 (하한액 66,048원)</div>
+                <div class="sublink-desc">2026년 최저임금 80% 하한액 적용 구간 월별·기간별 수령액</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/wage-max-cap.html">
+              <div>
+                <div class="sublink-title">월급 350만+ (상한액 68,100원)</div>
+                <div class="sublink-desc">고용보험법 시행령 제68조 1일 상한액 68,100원 적용 구간 총액</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/guide-over50.html">
+              <div>
+                <div class="sublink-title">50세 이상·장애인 (최대 270일)</div>
+                <div class="sublink-desc">이직일 기준 만 50세 이상 및 장애인 +30일 우대 수급일수표</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/guide-part-time.html">
+              <div>
+                <div class="sublink-title">단시간·알바 (4시간·6시간 비례)</div>
+                <div class="sublink-desc">1일 4시간(하한 33,024원)·6시간(49,536원) 비례 구직급여 계산</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+            <a class="sublink-item" href="/guide-eligibility-180days.html">
+              <div>
+                <div class="sublink-title">피보험단위기간 180일·수급요건</div>
+                <div class="sublink-desc">고용보험법 제40조 피보험단위기간 180일(유급일수) 산정 기준</div>
+              </div>
+              <span class="sublink-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PAGE:SUBLINKS END -->
 
     <!-- Mid AdSense Banner (Slot 1186914926) -->
     <!-- ADSENSE START: mid -->
@@ -1252,6 +1539,7 @@
     <!-- FAQ Accordion -->
     <section class="faq-section">
       <h2 class="faq-title">자주 묻는 질문 (FAQ)</h2>
+      <!-- PAGE:FAQ START -->
       <div class="faq-list">
         <details class="faq-item">
           <summary class="faq-question">
@@ -1281,7 +1569,15 @@
           </p>
         </details>
       </div>
+      <!-- PAGE:FAQ END -->
     </section>
+
+    <!-- Master Result Copy Button -->
+    <div class="mt-4 text-center" style="margin-top: 1.25rem; text-align: center;">
+      <button id="masterCopyBtn" onclick="copyUnemploymentSummary()" class="toolbar-btn primary" type="button" style="display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; padding:0.75rem 1.75rem; background:#0d9488; color:#ffffff; font-weight:800; border-radius:12px; border:none; cursor:pointer; font-size:0.875rem; box-shadow:0 2px 8px rgba(13,148,136,0.3); margin: 0 auto; width: auto; max-width: 100%;">
+        <span>📋 모의계산 결과 복사하기</span>
+      </button>
+    </div>
 
     <!-- Related Utilities Section -->
     <section class="utilities-section">
@@ -1314,14 +1610,14 @@
       </div>
     </section>
 
-    <!-- Deep-Dive Guides Section (Reverse Link Topic Cluster) -->
+    <!-- Related Calculator Topic Cluster Banner -->
     <div class="cluster-banner">
       <div>
-        <div class="cluster-title">고용지원금 실무 가이드</div>
-        <div class="cluster-desc">정부24 '출력 불가/미지원 프린터' 오류 1분 해결법 및 2026 정부지원금 실무 가이드</div>
+        <div class="cluster-title">소상공인·근로자 필수 노무 도구</div>
+        <div class="cluster-desc">5인 미만 사업장 퇴직금·실업급여 계산기 | 주휴수당 및 법정 기준 모의산정</div>
       </div>
-      <a class="cluster-btn" href="https://life-kr.enjoy-onepage.com/2026/09/18/gov24-printer-pdf-error-fix/" target="_blank" rel="noopener noreferrer">
-        민원 가이드 읽기 →
+      <a class="cluster-btn" href="https://smallbizcalc.enjoy-onepage.com/" target="_blank" rel="noopener noreferrer">
+        5인 미만 계산기 바로가기 →
       </a>
     </div>
 
@@ -1356,6 +1652,7 @@
   </footer>
 
   <!-- Universal Floating Toast -->
+  <div id="toast" style="display:none;"></div>
   <div id="globalToast"></div>
 
   <!-- Application Logic -->
@@ -1447,7 +1744,7 @@
         }
         if (effectiveDaily < lowerLimit) {
           effectiveDaily = lowerLimit;
-          noticeHtml = `<strong>💡 하한액 보장 적용:</strong> 최저임금 기준 하한액(${formatNumber(lowerLimit)}원, 1일 ${hours}시간)이 보장 적용됩니다.`;
+          noticeHtml = `<strong>💡 하한액 적용:</strong> 최저임금 기준 하한액(${formatNumber(lowerLimit)}원, 1일 ${hours}시간)이 보장 적용됩니다.`;
         } else if (!noticeHtml) {
           noticeHtml = `<strong>💡 정상 산정:</strong> 퇴사 전 평균임금의 60%인 1일 ${formatNumber(effectiveDaily)}원이 정상 적용됩니다.`;
         }
@@ -1461,6 +1758,8 @@
         ageBadge.textContent = ageGroup === 'under50' ? '만 50세 미만' : '만 50세 이상 / 장애인';
         recPeriod.textContent = PERIOD_LABELS[periodKey] || periodKey;
         recDuration.textContent = `총 ${days}일 (${(days / 30).toFixed(1)}개월)`;
+        const durationBadge = document.getElementById('durationBadge');
+        if (durationBadge) durationBadge.textContent = `총 ${days}일 수급 (${(days / 30).toFixed(1)}개월)`;
         recDailyRate.textContent = `${formatNumber(effectiveDaily)}원`;
 
         resTotalBenefit.textContent = formatNumber(total);
@@ -1527,10 +1826,25 @@
       }
 
       initFromUrl();
+
+      const copyUrlBtn = document.getElementById('copyUrlBtn');
+      if (copyUrlBtn) {
+        copyUrlBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('계산 결과 링크가 복사되었습니다.');
+          }).catch(() => {
+            showToast('복사하지 못했습니다. 주소창의 주소를 직접 복사하세요.');
+          });
+        });
+      }
     })();
 
     // Universal Toast Notification
     function showToast(msg) {
+      const toastEl = document.getElementById('toast');
+      if (toastEl) toastEl.textContent = msg;
       const toast = document.getElementById('globalToast');
       if (!toast) return;
       toast.textContent = msg;
