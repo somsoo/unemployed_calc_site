@@ -1,13 +1,20 @@
 {
  "app": "unemployed_calc_site",
  "host": "unemployed.enjoy-onepage.com",
- "watch": false,
- "status": "unverified",
- "checked": "",
+ "watch": true,
+ "status": "ok",
+ "checked": "2026-11-01",
  "soft_days": 60,
  "hard_days": 120,
  "grace_days": 31,
- "hide": [],
+ "hide": [
+  "#capNotice",
+  "#recDailyRate",
+  "#resTotalBenefit",
+  "#resDailyBenefit",
+  "#resMonthlyBenefit",
+  ".extra-table"
+ ],
  "pages": [
   "guide-eligibility-180days.html",
   "guide-over50.html",
@@ -21,8 +28,164 @@
   "wage-max-cap.html",
   "wage-min-floor.html"
  ],
- "values": {},
- "sources": {},
- "valid_until": "2026-12-31",
- "note": "이 페이지의 금액·비율은 2026년 기준"
+ "values": {
+  "min_wage": {
+   "v": 10320,
+   "label": "최저임금(시간급)",
+   "unit": "원",
+   "src": "mw",
+   "find": "시간급모든산업([\\d,]+)원",
+   "ai": false,
+   "min": 9000,
+   "max": 30000,
+   "max_ratio": 1.3,
+   "show": "won"
+  },
+  "mw_year": {
+   "v": 2026,
+   "label": "최저임금 적용 연도",
+   "unit": "년",
+   "src": "mw",
+   "find": "(\\d{4})년적용최저임금고시\\[시행",
+   "ai": false,
+   "min": 2026,
+   "max": 2100,
+   "max_ratio": 1.01,
+   "show": "raw"
+  },
+  "mw_no": {
+   "v": "2025-47",
+   "label": "최저임금 고시 번호",
+   "src": "mw",
+   "find": "고용노동부고시제(\\d{4}-\\d+)호",
+   "str": true,
+   "show": "raw"
+  },
+  "base_cap": {
+   "v": 113500,
+   "label": "구직급여 산정 기초 임금일액 상한(시행령 제68조)",
+   "unit": "원",
+   "src": "decree",
+   "find": "기초가\\s*되는\\s*임금일액이\\s*([\\d만천,]+)\\s*원을\\s*초과하는",
+   "ko": true,
+   "ai": false,
+   "min": 80000,
+   "max": 300000,
+   "max_ratio": 1.5,
+   "show": "won"
+  }
+ },
+ "sources": {
+  "mw": {
+   "type": "admrul",
+   "query": "최저임금 고시",
+   "title": "\\d{4}년 적용 최저임금 고시",
+   "label": "고용노동부 최저임금 고시",
+   "cadence": "weekly",
+   "next_keys": [
+    "min_wage",
+    "mw_year",
+    "mw_no"
+   ]
+  },
+  "decree": {
+   "type": "law",
+   "name": "고용보험법시행령",
+   "label": "고용보험법 시행령",
+   "articles": [
+    "제68조"
+   ],
+   "cadence": "weekly",
+   "claims": [
+    "구직급여의산정기초가되는임금일액이[\\d만천,]+원을초과하는경우에는[\\d만천,]+원을해당임금일액으로한다"
+   ]
+  },
+  "act": {
+   "type": "law",
+   "name": "고용보험법",
+   "label": "고용보험법",
+   "articles": [
+    "제45조",
+    "제46조",
+    "제50조"
+   ],
+   "cadence": "weekly",
+   "claims": [
+    "이직일당시적용되던「최저임금법」에따른시간단위에해당하는최저임금액을곱한금액\\(이하“최저기초일액”이라한다\\)보다낮은경우에는최저기초일액을기초일액으로한다",
+    "제5항의경우에는그수급자격자의기초일액에100분의60을곱한금액",
+    "제45조제4항의경우에는그수급자격자의기초일액에100분의80을곱한금액",
+    "산정된구직급여일액이최저구직급여일액보다낮은경우에는최저구직급여일액을그수급자격자의구직급여일액으로한다",
+    "피보험기간과연령에따라별표1에서정한일수가되는날까지로한다"
+   ]
+  },
+  "byl1": {
+   "type": "byl",
+   "name": "고용보험법",
+   "byl": "[별표 1]",
+   "label": "고용보험법 별표 1(소정급여일수)",
+   "cadence": "weekly",
+   "claims": [
+    "피보험기간1년미만1년이상3년미만3년이상5년미만5년이상10년미만10년이상",
+    "50세미만120일150일180일210일240일",
+    "50세이상120일180일210일240일270일",
+    "장애인은50세이상인것으로보아위표를적용한다"
+   ]
+  }
+ },
+ "valid_until": "2027-12-31",
+ "note": "이 페이지의 금액은 지난해 최저임금 고시 기준",
+ "valid_until_from": "mw_year",
+ "derived": {
+  "max_daily": "=floor(base_cap*6/10)",
+  "min_daily8": "=round(min_wage*8*8/10)",
+  "min_daily6": "=round(min_wage*6*8/10)",
+  "min_daily4": "=round(min_wage*4*8/10)",
+  "min_hour": "=round(min_wage*8/10)",
+  "top8": "=max(max_daily,min_daily8)",
+  "wcap": "=ceil(base_cap*91/3/10000)",
+  "raw300": "=3000000*3/91*6/10",
+  "pay300": "=max(min(raw300,max_daily),min_daily8)",
+  "raw340": "=3400000*3/91*6/10",
+  "pay340": "=max(min(raw340,max_daily),min_daily8)",
+  "raw350": "=3500000*3/91*6/10",
+  "pay350": "=max(min(raw350,max_daily),min_daily8)",
+  "raw400": "=4000000*3/91*6/10",
+  "pay400": "=max(min(raw400,max_daily),min_daily8)",
+  "raw250": "=2500000*3/91*6/10",
+  "pay250": "=max(min(raw250,max_daily),min_daily8)",
+  "raw120": "=1200000*3/91*6/10",
+  "pay120": "=max(min(raw120,max_daily),min_daily4)"
+ },
+ "templates": {
+  "index.html": {
+   "title": "실업급여 계산기 | {{mw_year|raw}}년 수급기간 및 일일수급액 모의계산"
+  },
+  "guide-part-time.html": {
+   "description": "1일 소정근로시간 4시간(하한 {{min_daily4|won}})·6시간({{min_daily6|won}}) 단시간 근로자의 구직급여를 계산합니다.",
+   "ld_description": "1일 소정근로시간 4시간(하한 {{min_daily4|won}})·6시간({{min_daily6|won}}) 단시간 근로자의 구직급여를 계산합니다."
+  },
+  "period-over10.html": {
+   "description": "피보험기간 10년 이상 장기근속 퇴사자의 240일·270일(최대 {{=floor(top8*270/10000)|int}}만원) 구직급여를 계산합니다.",
+   "ld_description": "피보험기간 10년 이상 장기근속 퇴사자의 240일·270일(최대 {{=floor(top8*270/10000)|int}}만원) 구직급여를 계산합니다."
+  },
+  "wage-max-cap.html": {
+   "title": "월급 {{wcap|int}}만원 이상 실업급여 | {{mw_year|raw}} 상한액 {{max_daily|won}}",
+   "description": "고용보험법 시행령 제68조에 따른 {{mw_year|raw}}년 구직급여 1일 상한액({{max_daily|won}}) 적용 구간 총액표입니다.",
+   "ld_name": "월급 {{wcap|int}}만원 이상 실업급여 계산",
+   "ld_description": "고용보험법 시행령 제68조에 따른 {{mw_year|raw}}년 구직급여 1일 상한액({{max_daily|won}}) 적용 구간 총액표입니다."
+  },
+  "wage-min-floor.html": {
+   "title": "월급 200만~300만원 실업급여 | {{mw_year|raw}} 하한액 {{min_daily8|won}}",
+   "description": "{{mw_year|raw}}년 최저임금({{min_wage|won}}) 80%가 적용되는 1일 하한액({{min_daily8|won}}) 구간 월별·기간별 수령액표입니다.",
+   "ld_description": "{{mw_year|raw}}년 최저임금({{min_wage|won}}) 80%가 적용되는 1일 하한액({{min_daily8|won}}) 구간 월별·기간별 수령액표입니다."
+  }
+ },
+ "next": {
+  "from": "2027-01-01",
+  "values": {
+   "min_wage": 10700,
+   "mw_year": 2027,
+   "mw_no": "2026-60"
+  }
+ }
 }
