@@ -1175,6 +1175,133 @@
     };
   })();
   </script>
+<!-- KIRO:VALUES START -->
+<script type="application/json" id="kiro-values">{"app":"unemployed_calc_site","valid_until":"2026-12-31","soft_days":60,"hard_days":120,"grace_days":31,"status":"unverified","note":"이 페이지의 금액·비율은 2026년 기준","values":{}}</script>
+<script>/* Kiro value guard v1 (2026-11-01). Values come from #kiro-values, written by the home server's value watcher.
+   window.KIRO_V = values in force today (a scheduled "next" set applies from its date).
+   Elements carrying data-v (value or =expression) and data-f (format) are re-rendered from those values;
+   a notice appears when the values are stale. */
+(function (W, doc) {
+  var D, V = {}, today, NEXT = false;
+  function ymd(s) { var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(s || ''); return m ? [+m[1], +m[2], +m[3]] : null; }
+  function num(a) { return a ? a[0] * 10000 + a[1] * 100 + a[2] : 0; }
+  function dayIndex(a) { return Math.floor(Date.UTC(a[0], a[1] - 1, a[2]) / 86400000); }
+  function own(o, k) { return Object.prototype.hasOwnProperty.call(o, k); }
+  try {
+    var el = doc.getElementById('kiro-values');
+    if (!el) return;
+    D = JSON.parse(el.textContent || '{}');
+    var d = new Date();
+    today = [d.getFullYear(), d.getMonth() + 1, d.getDate()];
+    var base = D.values || {}, k;
+    for (k in base) if (own(base, k)) V[k] = base[k];
+    if (D.next && D.next.values && ymd(D.next.from) && num(today) >= num(ymd(D.next.from))) {
+      for (k in D.next.values) if (own(D.next.values, k)) V[k] = D.next.values[k];
+      NEXT = true;
+    }
+    V._checked = D.checked || '';
+  } catch (e) { return; }
+  function lookup(p) {
+    var o = V, parts = String(p).split('/');
+    for (var i = 0; i < parts.length; i++) { if (o === null || typeof o !== 'object' || !own(o, parts[i])) return undefined; o = o[parts[i]]; }
+    return o;
+  }
+  function fix(x, n) {
+    var p = Math.pow(10, n), r = Math.floor(Math.abs(x) * p + 0.5), s = String(r);
+    if (n) { while (s.length <= n) s = '0' + s; s = s.slice(0, -n) + '.' + s.slice(-n); }
+    return (x < 0 && r ? '-' : '') + s;
+  }
+  function grp(s) {
+    var neg = s.charAt(0) === '-', t = neg ? s.slice(1) : s, parts = t.split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return (neg ? '-' : '') + parts.join('.');
+  }
+  function usd(x) {
+    var r = Math.floor(Math.abs(x) * 1000 + 0.5);
+    if (r % 1000 === 0) return '$' + grp(String(r / 1000));
+    var s = fix(x, 3);
+    if (s.slice(-1) === '0') s = s.slice(0, -1);
+    return '$' + grp(s);
+  }
+  function F(v, f) {
+    if (v === undefined || v === null || v === '') return null;
+    var a;
+    switch (f) {
+      case 'int': return grp(fix(+v, 0));
+      case 'won': return grp(fix(+v, 0)) + '원';
+      case 'pct0': return fix(+v, 0) + '%';
+      case 'pct1': return fix(+v, 1) + '%';
+      case 'pct2': return fix(+v, 2) + '%';
+      case 'pctx': a = fix(+v, 2); return (a.slice(-1) === '0' ? a.slice(0, -1) : a) + '%';
+      case 'num1': return grp(fix(+v, 1));
+      case 'num2': return grp(fix(+v, 2));
+      case 'usd': return usd(+v);
+      case 'usd2': return '$' + grp(fix(+v, 2));
+      case 'date': a = ymd(v); return a ? a[0] + '년 ' + a[1] + '월 ' + a[2] + '일' : null;
+      case 'ym': a = ymd(v); return a ? a[0] + '년 ' + a[1] + '월' : null;
+      case 'y': a = ymd(v); return a ? String(a[0]) : null;
+      case 'md': a = ymd(v); return a ? a[1] + '월 ' + a[2] + '일' : null;
+      default: return String(v);
+    }
+  }
+  var FN = {
+    round: function (x, n) { var p = Math.pow(10, n || 0); return Math.floor(Math.abs(x) * p + 0.5) / p * (x < 0 ? -1 : 1); },
+    floor: Math.floor, ceil: Math.ceil, min: Math.min, max: Math.max, abs: Math.abs
+  };
+  function ev(expr) {
+    expr = String(expr || '');
+    if (expr.charAt(0) !== '=') return lookup(expr);
+    var body = expr.slice(1);
+    if (!/^[\w\s.+\-*\/(),]*$/.test(body)) return undefined;
+    var js = body.replace(/[A-Za-z_]\w*/g, function (n) { return own(FN, n) ? 'F.' + n : 'L(' + JSON.stringify(n) + ')'; });
+    try { var r = Function('F', 'L', 'return (' + js + ');')(FN, lookup); return (typeof r === 'number' && isFinite(r)) ? r : undefined; }
+    catch (e) { return undefined; }
+  }
+  function render() {
+    var els = doc.querySelectorAll('[data-v]');
+    for (var i = 0; i < els.length; i++) {
+      var t = F(ev(els[i].getAttribute('data-v')), els[i].getAttribute('data-f') || 'raw');
+      if (t !== null && els[i].textContent !== t) els[i].textContent = t;
+    }
+  }
+  function notice() {
+    var level = 0, msg = '', t = dayIndex(today), vu = ymd(D.valid_until), ck = ymd(D.checked);
+    if (vu && num(today) > num(vu)) {
+      level = (t - dayIndex(vu) > (D.grace_days || 31)) ? 2 : 1;
+      msg = (D.note ? D.note + '입니다. ' : '') + '그 뒤 바뀐 기준은 아직 반영하지 못해 계산 결과가 다를 수 있어요.';
+    } else if (D.status === 'pending') {
+      level = 1;
+      msg = D.pending_note || '공식 기준이 바뀐 것으로 보여 새 값을 확인하고 있어요. 계산 결과가 다를 수 있어요.';
+    } else if (ck && D.status === 'ok') {
+      var age = t - dayIndex(ck);
+      if (age > (D.hard_days || 120)) level = 2; else if (age > (D.soft_days || 60)) level = 1;
+      if (level) msg = '이 페이지의 값은 ' + F(D.checked, 'date') + '에 공식 자료로 확인한 것이에요. 그 뒤 바뀌었을 수 있어요.';
+    }
+    W.KIRO_STALE = level;
+    if (!level) return;
+    if (level === 2) msg += ' 정확한 금액은 공식 기관에서 확인하세요.';
+    var box = doc.createElement('div');
+    box.id = 'kiro-fresh';
+    box.setAttribute('role', 'status');
+    box.style.cssText = 'box-sizing:border-box;width:calc(100% - 24px);max-width:1080px;margin:12px auto;padding:10px 14px;' +
+      'border:1px solid #f59e0b;border-radius:10px;background:#fffbeb;color:#78350f;font-size:14px;line-height:1.6;word-break:keep-all;text-align:left';
+    box.textContent = '\u26a0\ufe0f ' + msg;
+    var h = doc.querySelector('body > header') || doc.querySelector('header'), m = doc.querySelector('main');
+    if (h && h.parentNode) h.parentNode.insertBefore(box, h.nextSibling);
+    else if (m && m.parentNode) m.parentNode.insertBefore(box, m);
+    else doc.body.insertBefore(box, doc.body.firstChild);
+    if (level === 2 && D.hide) {
+      for (var i = 0; i < D.hide.length; i++) {
+        var hs = doc.querySelectorAll(D.hide[i]);
+        for (var j = 0; j < hs.length; j++) hs[j].style.display = 'none';
+      }
+    }
+  }
+  W.KIRO_V = V; W.KIRO_VALUES = D; W.KIRO_FMT = F; W.KIRO_EVAL = ev; W.KIRO_NEXT = NEXT;
+  function go() { try { render(); } catch (e) {} try { notice(); } catch (e2) {} }
+  if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', go); else go();
+})(window, document);</script>
+<!-- KIRO:VALUES END -->
 </head>
 
 <body>

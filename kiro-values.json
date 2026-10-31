@@ -1,0 +1,28 @@
+{
+ "app": "unemployed_calc_site",
+ "host": "unemployed.enjoy-onepage.com",
+ "watch": false,
+ "status": "unverified",
+ "checked": "",
+ "soft_days": 60,
+ "hard_days": 120,
+ "grace_days": 31,
+ "hide": [],
+ "pages": [
+  "guide-eligibility-180days.html",
+  "guide-over50.html",
+  "guide-part-time.html",
+  "index.html",
+  "period-1to3.html",
+  "period-3to5.html",
+  "period-5to10.html",
+  "period-over10.html",
+  "period-under1.html",
+  "wage-max-cap.html",
+  "wage-min-floor.html"
+ ],
+ "values": {},
+ "sources": {},
+ "valid_until": "2026-12-31",
+ "note": "이 페이지의 금액·비율은 2026년 기준"
+}
